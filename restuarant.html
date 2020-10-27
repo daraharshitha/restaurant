@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>BayLeaf</title>
+	<link rel="stylesheet" type="text/css" href="restaurant.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+.item2
+{
+grid-area:left;
+padding:20px;
+}
+.item3
+{
+grid-area:main;
+padding:20px;
+}
+.item4
+{
+grid-area:right;
+padding:20px;
+}
+.item5{ 
+grid-area:footer; 
+padding:90px;
+background-color:white;}
+#image{border-radius:50%;}
+.grid-container{
+display:grid;
+grid-template-areas:
+	'head head head head head head'
+	'left left main main right right'
+	'footer footer footer footer footer footer'
+	'footer footer footer footer footer footer';}
+.grid-container>div{
+color:white;
+font-family:cursive;
+text-align:center;}
+body
+{
+background-image:url("11.jpg");
+background-size:cover;
+background-attachment:fixed;
+}
+p
+{
+font-style:italic;
+font-width:bold;
+font-size:20px;
+color:#761804;
+}
+<style>
+*{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
+input[type=text], input[type=password] {
+
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 26px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	font-size:16px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 26px;
+    border: none;
+    cursor: pointer;
+    width: 3-0%;
+	font-size:20px;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+.avatar {
+    width: 200px;
+	height:200px;
+    border-radius: 50%;
+}
+
+
+.modal {
+	display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 4% auto 15% auto;
+    border: 1px solid #888;
+    width: 40%; 
+	padding-bottom: 30px;
+}
+
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+.animate {
+    animation: zoom 0.6s
+}
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+</style>
+
+</style>
+<link rel="shortcut icon" href="http://moziru.com/images/symbol-clipart-friendship-8.jpg">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <ul>
+      	<li>
+      <a class="navbar-brand" href="about.html">Welcome</a></li>
+  </ul>
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    	<ul class="nav navbar-nav">
+    		<li>
+    	<!-- <a href="index.html"> login</a></li> -->
+    	<button onclick="document.getElementById('modal-wrapper').style.display='block'">
+login</button></li></ul>
+<a href="user.html">
+	<button >
+signup</button>
+</a>
+
+    <a href="about.html">
+	<button >
+About</button>
+</a>
+    </div>
+</div>
+</nav>
+
+
+<div id="modal-wrapper" class="modal">
+  
+  <form class="modal-content animate" action="restaurant2.html">
+        
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+      <img src="mf.png" alt="Avatar" class="avatar">
+      <h1 style="text-align:center">enter your details</h1>
+    </div>
+
+    <div class="container">
+      <input type="text" placeholder="Enter Username" name="uname" required><br>
+      <input type="password" placeholder="Enter Password"  name="psw" required><br>    
+      <button type="submit" onclick="check(this.form)" >Login</button><br> 
+      <input type="checkbox" style="margin:26px 30px;"> Remember me    
+      <a href="change.html">change Password ?</a>
+
+
+    </div>
+    
+  </form>
+  
+</div>
+		<div class="container" style="background-image: url('mddle.jpg');">
+			<div class="jumbotron">
+				<!-- <h1 >enter which city u want </h1><br> -->
+				<img src="symbol-clipart-friendship-8.jpg" style="height: 200px;width: 200px"><br>
+				<h1 style="text-align: left;">BayLeaf</h1>
+					<h2>"we cant wait to serve you"</h2>
+				</div>
+		
+   
+         <video controls autoplay width="520" height="440" muted>
+         	<source src="bl.mp4" type="">
+         </video>
+     </div>
+	<div class="container" >
+	<h3>For differnt types of restauents</h3><br>
+				<form action="res1.html" method="get">
+
+				<button type="submit" class="btn btn-danger btn-lg">clickme
+				 </button>
+			</form>
+		</div>
+	<div class="container">
+		<h2>Find the one which you love most</h2>
+		<div class="row">
+		<div class="col-lg-4 col-xs-6 thumbnail"><img src="http://images.seekbusiness.com.au/advertiser/original/18724/2f6c4211-0905-4de5-b2f5-983f06787927.jpg"> </div>
+		<div class="col-lg-4 col-xs-6 thumbnail" ><img src="https://qph.fs.quoracdn.net/main-qimg-d8594c616a3fa299033b162d8b92b6ed-c"></div>
+		<div class="col-lg-4 col-xs-6 thumbnail" ><img src="https://jhfoodjourny.weebly.com/uploads/4/6/3/2/46328949/868153_orig.jpg"></div>
+		<div class="col-lg-4 col-xs-6 thumbnail" ><img src="http://legacy.blavity.com/wp-content/uploads/2015/11/livinthepielife.com_.jpg"></div>
+		<div class="col-lg-4 col-xs-6 thumbnail" ><img src="https://www.smh.com.au/content/dam/images/g/q/g/o/m/7/image.imgtype.articleLeadwide.620x349.png/1470795920571.jpg"></div>
+		<div class="col-lg-4 col-xs-6 thumbnail" ><img src="http://sushischool.jp/wp/wp-content/uploads/2016/01/osechi-2.jpg"></div>
+	</div>
+	</div>
+     
+	<h2>links of the images </h2>
+	<ul>
+		<li><a href="http://images.seekbusiness.com.au/advertiser/original/18724/2f6c4211-0905-4de5-b2f5-983f06787927.jpg">coffee</a> </li>
+		<li><a href="https://qph.fs.quoracdn.net/main-qimg-d8594c616a3fa299033b162d8b92b6ed-c">Indian</a></li>
+		<li><a href="https://jhfoodjourny.weebly.com/uploads/4/6/3/2/46328949/868153_orig.jpg">Chinese</a></li>
+		<li><a href="http://legacy.blavity.com/wp-content/uploads/2015/11/livinthepielife.com_.jpg">Italian</a></li>
+		<li><a href="https://www.smh.com.au/content/dam/images/g/q/g/o/m/7/image.imgtype.articleLeadwide.620x349.png/1470795920571.jpg">USA</a></li>
+		<li><a href="http://sushischool.jp/wp/wp-content/uploads/2016/01/osechi-2.jpg">Japan</a></li>
+	</ul>
+     
+	<div class="grid-container">
+	<div class="item2">
+<center>
+<div id="a"> <p> WANT TO BOOK A TABLE! </p> <br>
+<img id="image"src="images.jpg" width="200px" height="200px" boarder-radius:50%> <br>
+This is the right place where you get a table reserved to have a  tasty food
+and fill your stomach by having that food 
+</div>
+</div>
+<div class="item3">
+<center>
+<div id="a"><p>WANT TASTY CHICKEN!</p><br>
+<img id="image"src="image.jpg" width="200px" height="200px"> <br>
+The perfect place to have tasty chicken is lovely resturent . you can get the 
+chicken of different kinds and you can get the tastes of different countries.
+</div>
+</div>
+<div class="item4">
+<center>
+<div id="a"><p>WANT TO BOOK A HOTEL ROOM!</p><br>
+<img id="image"src="download (1).jpg" width="200px" height="200px"> <br>
+The place where you get a perfect room for the relaxation is lovely restaurent
+there are rooms of all the kinds , with different types of facilities available 
+in it . 
+</div>
+</div>
+</div>
+	<div class="item5">
+		<center>
+<div style="width:40%;font-size:30px;">
+DSLR@thope.com</div><br>
+<p>call to this numbers when ever u want toll free</p>
+<div style="color:#761804;">9959519669||6280501098<br><br>
+we are working hard though..............some info
+</div><br>
+<img src="15.jpg" width="30px" height="30px">
+<img src="16.png" width="30px" height="30px">
+<a href="https://www.facebook.com/">
+<img src="17.png" width="30px" height="30px">
+</a>
+<img src="18.png" width="30px" height="30px">
+<img src="19.jpg" width="30px" height="30px">
+<img src="20.jpg" width="30px" height="30px">
+<img src="22.png" width="30px" height="30px">
+<img src="23.jpg" width="30px" height="30px">
+</center>
+</div>
+<script>
+
+var modal = document.getElementById('modal-wrapper');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function check(form) {
+                if(form.uname.value == "pavan" && form.psw.value == "143") {
+                    alert('you are logined')
+                }
+                else {
+                    alert("Error Password or Username")
+window.location.href="restuarant.html";
+                }
+            }
+</script>
+</body>
+</html>

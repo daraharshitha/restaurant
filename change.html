@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<style>
+	body{
+		background-image: url('13.jpg');
+		background-size: 100%;
+	}
+</style>
+<head>
+	<title>change password</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="shortcut icon" href="http://moziru.com/images/symbol-clipart-friendship-8.jpg"><body>
+		<form action="restuarant.html" method="get">
+	<div class="container">
+	<div class="jumbotron">
+		<h1>change password</h1>
+		<p>type same pasword two times</p>
+	</div>
+	<div class="form-group">
+		<label>password</label>
+	<input type="password" name="" id="a" class="form-control" required>
+	<label>
+		retype password
+	</label>
+	<input type="password" name="" id="b" class="form-control" required>
+</div>
+     <div class="checkbox">
+     	<label>
+     		<input type="checkbox" name="">check me out
+     	</label>
+     </div>
+     <a href="restuarant.html">
+    <button type="submit" class="btn btn-success btn-lg" onclick="fun()">continue
+	</button>
+</a>
+	</form>
+     </div>
+
+</div>
+<script>
+	function fun(){
+		var x=document.getElementById("a");
+		var y=document.getElementById("b");
+		if(x==y)
+		{
+			     alert('password changed succesfully')
+                }
+                else {
+                    alert("please enter the correct password" )
+                }
+
+	}
+</script>
+</body>
+</html>

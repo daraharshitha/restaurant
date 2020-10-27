@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>User account</title>
+<link href="style3.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<form onsubmit="return(validate())" method="post" action="restaurant2.html">
+<div class="sign">
+
+<h1>Sign up Free here</h1>
+
+<input type="text" placeholder="Your Name" required id="n"><br><br>
+<input type="text" placeholder="Email" required id="e"><br><br>
+<input type="text" placeholder="Mobile number" required id="m"><br><br>
+<textarea rows="8" cols="20" placeholder="Address" required id="t" ></textarea><br><br>
+<input type="password" placeholder="password" required id="p"><br><br>
+<input type="password" placeholder="confirm password" required id="cp"><br>
+<div class="country">
+<span style="font-size:18px">Country</span><br>
+<select name="Country" id="co">
+<option value="1">-select-</option>
+<option value="2">India</option>
+<option value="3">USA</option>
+<option value="4">England</option>
+<option value="5">France</option>
+</select><br><br></div>
+<input type="submit" value="Create a Account"><br>
+<input type="checkbox" required >I Accept Terms and Conditions
+</form>
+<script>
+
+function validate()
+ {
+if( document.getElementById("n").value=="" )
+         {
+          alert( "Please provide your name!" );
+          document.getElementById("n").focus() ;
+          return false;
+ }
+x=document.getElementById("e").value
+         atpos = x.indexOf("@");
+         dotpos = x.indexOf(".");
+         dotposLast = x.lastIndexOf(".");
+
+if (x==""||atpos<1 || dotpos<=atpos+2 || dotposLast+2>=x.length) 
+{ 
+alert( "Please provide Correct Email ID!" );
+    document.getElementById("e").focus() ;
+     return false;
+         }
+a=document.getElementById("m").value 
+ if(a == "" || a.length != 10 || isNaN(a)  )
+         {
+alert( "Please provide valid phone number" );
+ document.getElementById("m").focus() ;
+ return false;  
+        }
+a= document.getElementById("p").value
+b=document.getElementById("cp").value
+if( a== "" ||  a !=b )
+         {
+  alert( "Please enter same password" );
+  document.getElementById("cp").focus() ;
+   return false;
+         }
+return(true);      
+}
+
+</script>
+
+</div>
+</body>
+</html>

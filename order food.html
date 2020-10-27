@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  food ordering </title>
+<style>
+body{
+background-image: url('4.jpg');
+background-size:cover;
+background-repeat:no-repeat;
+font-family:Arial;
+}
+
+	h2{
+		margin: 0 0 30px 0;
+		padding: 10px;
+		color:#efed40;
+		text-align: center;
+	}
+p{
+color:white;
+font-family: Arial;
+}
+	input{
+		width:50%;
+		margin-bottom:30px;
+
+	}
+	[type=text]{
+		border:none;
+		outline:none;
+		border:2px #fff dotted;
+		background:transparent;
+		border-radius: 20px;
+		box-sizing: border-box;
+		color: #fff;
+		font-size: 16px;
+		padding: 10px;
+		text-align:center;
+
+	}
+	::placeholder{
+		color: rgb(0,0,0,0.5);
+		text-align: center;
+	}
+	input[type=submit]{
+		border:none;
+		outline: none;
+		padding: 10px ;
+
+		color: white;
+		font-size: 16px;
+		font-family: Arial;
+		background:purple;
+		cursor: pointer;
+		border-radius: 20px;
+
+	}
+	input[type=submit]:hover{
+		background:blue;
+		color: 262626;
+	}
+	
+   
+.sign input,select,textarea
+{
+	padding:10px ;
+	border:none;
+	margin:8px 8px;
+background:transparent;
+border:2px #fff dotted;
+	display:inline-block;
+	border-bottom:1px  solid white;
+	border-radius:40px;
+	box-sizing:border-box;
+	font-size:18px;
+text-align:center;
+color:white
+	}
+::placeholder{
+		color: rgb(255,255,255,0.5);
+		text-align: center;
+	}
+
+	</style>
+
+
+
+
+
+</head>
+<body>
+<form onsubmit="return(validate())" method="get">
+<div class="order">
+<div style="background-color:rgba(0,0,0,0.5);border-radius:50px;padding:15px;width:500px;">
+
+<h2>  ORDER YOUR FOOD </h2>
+<p> The food will be delivered with in 1 hour after placing the order </p>
+
+<p> Name :</p> 
+<input type="text"  name="name" placeholder="enter your name" required id="n"> <br>
+<p> Mobile Number :</p>
+<input type="text"  name="mobile number" placeholder="mobile number" required id="m"> <br> 
+<p> Address :</p> <br>
+<textarea rows="8" cols="45" placeholder="Address" required id="t" ></textarea> <br>
+<p> Items to be ordered :</p> <br>
+<textarea rows="10" cols="45" placeholder="Food" required id="t" ></textarea><br>
+
+<input type="submit" value="place order"  > <br></div>
+</form>
+<script>
+function validate()
+{
+( document.getElementById("n").value=="" )
+         {
+          alert( "Please provide your name!" );
+          document.getElementById("n").focus() ;
+          return false;
+ }
+a=document.getElementById("m").value 
+ if(a == "" || a.length != 10 || isNaN(a)  )
+         {
+alert( "Please provide valid phone number" );
+ document.getElementById("m").focus() ;
+ return false;  
+        }
+return(true);
+}
+alert('your order is noted  your order will be delivered with in 1hour ')
+	
+}
+}
+</script>
+</body> </html>
